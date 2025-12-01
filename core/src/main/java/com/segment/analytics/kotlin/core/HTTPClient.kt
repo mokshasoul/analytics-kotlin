@@ -152,7 +152,7 @@ open class RequestFactory {
 
     open fun upload(apiHost: String): HttpURLConnection {
         val connection: HttpURLConnection = openConnection("https://$apiHost/b")
-        connection.setRequestProperty("Content-Type", "text/plain")
+        connection.setRequestProperty("Content-Type", "application/json")
         connection.setRequestProperty("Content-Encoding", "gzip")
         connection.doOutput = true
         connection.setChunkedStreamingMode(0)
